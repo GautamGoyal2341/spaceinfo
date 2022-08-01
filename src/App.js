@@ -1,5 +1,5 @@
 import { Component } from "react";
-import logo from "./logo.svg";
+
 import "./App.css";
 
 class App extends Component{
@@ -14,13 +14,16 @@ class App extends Component{
   componentDidMount(){
     fetch("https://api.spacexdata.com/v4/rockets")
     .then((response) =>(response.json()))
-    .then(rockets => console.log(rockets))
+    .then(rockets => this.setState({rockets :rockets}))
   }
 
   render() {
     // function App(){
     return (
       <div className="App">
+          {this.state.rockets.map((rocket) => (
+            <h1 key={rocket.id}>{rocket.name}</h1>
+          ) )}
 
       </div>
     );
