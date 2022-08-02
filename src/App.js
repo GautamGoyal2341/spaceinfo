@@ -20,9 +20,18 @@ class App extends Component{
   render() {
     // function App(){
     return (
-      <div className="App">
+      <div className="container">
           {this.state.rockets.map((rocket) => (
-            <h1 key={rocket.id}>{rocket.name}</h1>
+
+            // <h1 key={rocket.id}>{rocket.name}</h1>
+            <div className="card" key={rocket.id}>
+  <img src="..." className="card-img-top" alt="..."/>
+  <div className="card-body">
+    <h5 className="card-title">{rocket.name}</h5>
+    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" className="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
           ) )}
 
       </div>
