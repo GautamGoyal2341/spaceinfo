@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component, Fragment } from "react";
 
 import "./App.css";
 import { Card } from "./components/Card";
@@ -25,8 +25,11 @@ class App extends Component {
         <div className="row">
           {this.state.rockets.map((rocket) => (
             // <h1 key={rocket.id}>{rocket.name}</h1>
-         <Card rocket = {rocket} />
-            
+            <Fragment>
+              <Card rocket={rocket} />
+              
+
+            </Fragment>
           ))}
         </div>
       </div>
