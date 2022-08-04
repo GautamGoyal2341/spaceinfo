@@ -2,6 +2,7 @@ import { Component, Fragment } from "react";
 
 import "./App.css";
 import { Card } from "./components/Card";
+import {Modal} from "./components/Modal";
 
 class App extends Component {
   constructor() {
@@ -27,8 +28,8 @@ class App extends Component {
             // <h1 key={rocket.id}>{rocket.name}</h1>
             <Fragment>
               <Card rocket={rocket} />
-              
 
+             <Modal rocket={rocket} />
             </Fragment>
           ))}
         </div>
