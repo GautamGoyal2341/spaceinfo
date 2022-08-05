@@ -23,6 +23,7 @@ class App extends Component {
     // function App(){
     return (
       <div className="container">
+        <h1>SpaceX Rockets</h1>
         <div className="row">
           {this.state.rockets.map((rocket) => (
             // <h1 key={rocket.id}>{rocket.name}</h1>
