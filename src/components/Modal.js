@@ -29,10 +29,18 @@ export const Modal = ({ rocket }) => (
           >
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src={rocket.flickr_images[0]} class="d-block w-100" alt="..." />
+                <img
+                  src={rocket.flickr_images[0]}
+                  class="d-block w-100"
+                  alt="..."
+                />
               </div>
               <div class="carousel-item">
-                <img src={rocket.flickr_images[1]} class="d-block w-100" alt="..." />
+                <img
+                  src={rocket.flickr_images[1]}
+                  class="d-block w-100"
+                  alt="..."
+                />
               </div>
             </div>
             <a
@@ -60,6 +68,45 @@ export const Modal = ({ rocket }) => (
               <span class="sr-only">Next</span>
             </a>
           </div>
+
+          <div className="row rocket-info">
+            <div className="col-sm-4">
+              <h4>Height</h4>
+
+              <p>{rocket.height.feet} Feet</p>
+            </div>
+
+            <div className="col-sm-4">
+              <h4>Diameter</h4>
+
+              <p>{rocket.diameter.feet} Feet</p>
+            </div>
+
+            <div className="col-sm-4">
+              <h4>Mass</h4>
+              <p>{rocket.mass.kg / 1000} Tonne</p>
+            </div>
+
+            <div className="col-sm-4">
+              <h4>First Fany</h4>
+
+              <p>{rocket.first_flight}</p>
+            </div>
+
+            <div className="col-sm-4">
+              <h4>Active</h4>
+
+              <p>{rocket.active ? `Yes` : `No`}</p>
+            </div>
+
+            <div className="col-sm-4">
+              <h4>Cost/Launch</h4>
+              <p>${rocket.cost_per_launch / 1000000} Million</p>
+
+            </div>
+          </div>
+          <p>{rocket.description}</p>
+          <a href={rocket.wikipedia} className="btn btn-primary btn-block" target = "_blank"> Learn More on Wiki </a>
         </div>
       </div>
     </div>
