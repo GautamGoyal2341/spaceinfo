@@ -1,7 +1,8 @@
-export const Filter = ( ) => (
+export const Filter = () => (
  
     <div className="filter-wrapper">
         <select name="height" className="filter-height">
+        <option value="0">Select Height</option>
             <option value="100">More than 100 ft</option>
             <option value="200">More than 200 ft</option>
             <option value="300">More than 300 ft</option>
