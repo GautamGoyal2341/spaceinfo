@@ -2,6 +2,7 @@ import { Component, Fragment } from "react";
 
 import "./App.css";
 import { Card } from "./components/Card";
+import { Filter } from "./components/Filter";
 import {Modal} from "./components/Modal";
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
     return (
       <div className="container">
         <h1>SpaceX Rockets</h1>
+        <Filter />
         <div className="row">
           {this.state.rockets.map((rocket) => (
             // <h1 key={rocket.id}>{rocket.name}</h1>
