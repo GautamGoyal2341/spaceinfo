@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div className="container">
         <h1>SpaceX Rockets</h1>
-        <Filter />
+        <Filter onChange= {this.handelChange} />
         <div className="row">
           {this.state.rockets.map((rocket) => (
             // <h1 key={rocket.id}>{rocket.name}</h1>
