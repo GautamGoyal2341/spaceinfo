@@ -26,6 +26,12 @@ class App extends Component {
   }
 
   render() {
+   
+      const {rockets , selectheight} = this.state;
+      const filteredRockets  = rockets.filter((rocket) =>
+            rocket.height.feet > selectheight      
+      );
+     
     // function App(){
     return (
       <div className="container">
