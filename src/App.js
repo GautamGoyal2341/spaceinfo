@@ -11,6 +11,7 @@ class App extends Component {
 
     this.state = {
       rockets: [],
+      selectheight : 0
     };
   }
 
@@ -18,6 +19,10 @@ class App extends Component {
     fetch("https://api.spacexdata.com/v4/rockets")
       .then((response) => response.json())
       .then((rockets) => this.setState({ rockets: rockets }));
+  }
+  handelChange(e){
+    this.setState({selectheight : e.target.value})
+
   }
 
   render() {
