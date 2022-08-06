@@ -20,7 +20,7 @@ class App extends Component {
       .then((response) => response.json())
       .then((rockets) => this.setState({ rockets: rockets }));
   }
-  handelChange(e){
+  handelChange = (e) =>{
     this.setState({selectheight : e.target.value})
 
   }
@@ -38,7 +38,7 @@ class App extends Component {
         <h1>SpaceX Rockets</h1>
         <Filter onChange= {this.handelChange} />
         <div className="row">
-          {this.state.rockets.map((rocket) => (
+          {filteredRockets.map((rocket) => (
             // <h1 key={rocket.id}>{rocket.name}</h1>
             <Fragment>
               <Card rocket={rocket} />
